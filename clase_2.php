@@ -16,7 +16,9 @@ if(isset($_POST["nombre"]) )
 <body>
 
 	<form name="form" action="" method="post">
+
 			<input type="hidden" name="csrf" value="097sa09dasodhsaoi" />
+
 		<p>
 			Nombre: <input type="text" name="nombre" />
 		</p>
