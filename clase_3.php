@@ -1,48 +1,29 @@
+
 <?php
-if(isset($_POST["nombre"]) )
+if(isset($_POST["csrf"]))
 {
-	
-	 
+
+	$mensaje="";
 	if(filter_var( trim( $_POST["nombre"] )  ) == false)
 	{
-		echo "el campo nombre viene vacío";
-		exit;
+		$mensaje.="El campo Nombre está vacío<br />";
 	}
 	if(filter_var( trim( $_POST["correo"] )  ) == false)
 	{
-		echo "el E-Mail nombre viene vacío";
+		$mensaje.="El campo E-Mail está vacío<br />";
+	}
+	//si mensaje está vacío
+	if(empty($mensaje))
+	{
+		print_r($_POST);
 		exit;
-	}
-
-
-	$pais = "";
-	$genero ="";
-	switch($_POST["pais"])
-	{
-		case '1':
-			$pais="Chile";
-		break;
-		case '2':
-			$pais="Venezuela";
-		break;
-		case '3':
-			$pais="Costarica";
-		break;
-		case '4':
-			$pais="Perú";
-		break;
-	} 
-	if($_POST["genero"]=='m')
-	{
-		$genero="Masculino";
 	}else
-	{	
-		$genero="Femenino";
+	{
+		header("Location: clase_3.php?m=".base64_encode($mensaje));
 	}
-	echo "Su país es ".$pais." y su género es ".$genero;
-	exit;//aquí se detiene la ejecución del script
 }
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,6 +31,14 @@ if(isset($_POST["nombre"]) )
 	<title>Formulario</title>
 </head>
 <body>
+	<?php
+	if(isset($_GET["m"]))
+	{
+		?>	
+			<p><?php echo base64_decode($_GET["m"]);?></p>
+		<?php
+	}
+	?>
 
 	<form name="form" action="" method="post">
 
