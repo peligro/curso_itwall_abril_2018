@@ -16,11 +16,11 @@ for($i=0;$i<sizeof($matriz);$i++)//recorro las filas
 	}
 }
 echo "<hr />";
-foreach($matriz as $key=>$m)
+foreach($matriz as $key=>$filas)
 {
-	foreach($m as $mm)
+	foreach($filas as $columnas)
 	{
-		echo "Fila ".$key." = ".$mm;
+		echo "Fila ".$key." = ".$columnas;
 		echo "<br />";
 	}
 }
