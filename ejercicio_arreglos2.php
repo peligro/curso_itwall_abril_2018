@@ -16,7 +16,7 @@ $paises =array("Chile","Argentina","México","Perú","Bolivia","Siria","Egipto",
 				foreach($paises as  $key=>$pais)
 				{
 					?>
-					<option value="<?php echo $key?>"><?php echo $pais?></option>
+					<option value="<?php echo $posision?>"><?php echo $pais?></option>
 					<?php
 				}
 				?>
