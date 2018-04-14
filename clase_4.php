@@ -2,7 +2,7 @@
 <?php
 if(isset($_POST["csrf"]))
 {
-///print_r($_FILES);exit;
+//print_r($_FILES);exit;
 	//echo $_FILES["foto"]["tmp_name"];
 
 	$mensaje="";
@@ -11,8 +11,8 @@ if(isset($_POST["csrf"]))
 	//valido lo que necesito
 		if($_FILES["foto"]["type"]=="image/jpeg" or $_FILES["foto"]["type"]=="image/png")
 		{
-			
-			copy( $_FILES["foto"]["tmp_name"] ,"public/uploads/foto.jpg");
+			//emula el comando CP de linux
+			copy( $_FILES["foto"]["tmp_name"] ,"public/uploads/foto_id.jpg");
 			echo "<img src='public/uploads/foto.jpg' />";
 		}else
 		{
@@ -40,7 +40,7 @@ if(isset($_POST["csrf"]))
 			<input type="hidden" name="csrf" value="097sa09dasodhsaoi" />
 
 		<p>
-			Suba una foto: <input type="file" name="foto" />
+			Suba una foto: <input type="file" name="foto"  />
 		</p>
 		
 		<p>
