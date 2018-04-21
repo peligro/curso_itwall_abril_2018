@@ -7,13 +7,13 @@
 </head>
 <body>
 
-	<p>texto dentro del párrafo ñandú</p>
+	<p id="parrafo_1" class="parrafos2 otra_clase">texto dentro del párrafo ñandú</p>
 	<hr />
-	<p>texto dentro del párrafo ñandú</p>
+	<p id="parrafo_2">texto dentro del párrafo ñandú</p>
 	<hr />
-	<p>texto dentro del párrafo ñandú</p>
+	<p id="parrafo_3">texto dentro del párrafo ñandú</p>
 	<hr />
-	<div>texto del div</div>
+	<div id="div_1">texto del div</div>
 
 </body>
 </html>
