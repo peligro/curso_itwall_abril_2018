@@ -21,4 +21,16 @@ class Productos extends Conectar
         return $arreglo; 
         
     }
+    public function getProductosActivos()
+    {
+        $sql="select * from productos where estado=1;";
+        $datos =$this->bd->query($sql);
+        $arreglo=array();
+        while($reg=$datos->fetch_object())
+           {
+                $arreglo[]=$reg;
+           }  
+        return $arreglo; 
+        
+    }
 }
