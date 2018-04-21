@@ -25,10 +25,28 @@ Create
 	values
 	(null,'Nuevo tipo ñandú');
 
-	insert into producto
+	insert into productos
 	values
-	();
+	(null,7,'ombre pphpph',87687,now(),1);
 
 Read
+	
+
 Update
+	
+	update productos 
+	set
+	nombre = 'nombre nuevo',
+	precio = 7897
+	where
+	id =1;
+
 Delete
+
+	delete from productos  
+	where
+	id =1;
+
+
+	truncate table productos;
+
