@@ -9,3 +9,7 @@ create table personas
 	fecha date,
 	estado int
 );
+
+--agregar llave foránea
+
+alter table productos add constraint tipo_producto_nombre foreign key (tipo_producto_id) references tipo_productos(id);
