@@ -30,7 +30,20 @@ Create
 	(null,7,'ombre pphpph',87687,now(),1);
 
 Read
-	
+	//minería de datos
+	select id,tipo_producto_id as tipo,nombre,precio,fecha,estado, concat_ws(' ',nombre,precio) as concatenado from productos
+
+	select year(fecha) as año, month(fecha) as mes,day(fecha) as dia from productos
+
+	select 
+	p.id,p.tipo_producto_id,p.nombre,p.fecha,p.estado,t.tipo_productos
+	from 
+	productos as p 
+	join tipo_productos as t on p.tipo_producto_id = t.id
+	where 
+	estado=1;
+
+
 
 Update
 	
