@@ -1,6 +1,6 @@
 create database itwall character set utf8 collate utf8_spanish_ci;
 
-create table
+create table personas
 (
 	id int auto_increment not null primary key,
 	nombre varchar(100),
