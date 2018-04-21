@@ -39,9 +39,17 @@ Read
 	p.id,p.tipo_producto_id,p.nombre,p.fecha,p.estado,t.tipo_productos
 	from 
 	productos as p 
-	join tipo_productos as t on p.tipo_producto_id = t.id
+	inner join tipo_productos as t on p.tipo_producto_id = t.id
 	where 
 	estado=1;
+
+	tabla a id id_tabla_b
+	tabla b
+
+	tabla_a join on 
+
+
+
 
 
 
