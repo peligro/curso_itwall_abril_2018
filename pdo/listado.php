@@ -25,14 +25,14 @@ $datos=$p->getProductos();
     <meta charset="utf-8" />
     <title>Listado de productos</title>
     <link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css" />
-
+    <link rel="stylesheet" type="text/css" href="public/css/estilos.css" />
 </head>
 <body>
     <div class="container">
         <div class="row">
             <!--panel-->
-            <div class="panel panel-primary">
-                 <div class="panel-heading">Título del panel</div>
+            <div class="panel panel-primary ">
+                 <div class="panel-heading clase">Título del panel</div>
                  <div class="panel-body">
                      <h1>Listado de Productos</h1>
                      <table class="table table-bordered">
