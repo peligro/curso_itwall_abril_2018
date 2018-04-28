@@ -20,12 +20,12 @@ class Productos extends Conectar
         $this->bd=null;
 
     }
-    public function procesar()
+    public function procesar($sql)
     {
-        $sql="CUD";
+        
         $datos = $this->bd->prepare($sql);
         $datos->execute();
-        //return $this->bd->lastInsertId();
+        return $this->bd->lastInsertId();
     }
    
 }
